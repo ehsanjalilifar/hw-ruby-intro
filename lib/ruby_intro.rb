@@ -41,15 +41,29 @@ end
 # Part 2
 
 def hello(name)
-  # YOUR CODE HERE
+  return "Hello, " + name
 end
 
 def starts_with_consonant? s
-  # YOUR CODE HERE
+  # return false if s.length() == 0
+  return false if (s =~ /[a-zA-Z]/) != 0
+  if (s =~ /[aeiou]/i) == 0
+    return false
+  else
+    return true
+  end
 end
 
 def binary_multiple_of_4? s
-  # YOUR CODE HERE
+  # Check if it is a valid binary number
+  return false if (s =~ /[^01]/) != nil
+  
+  if s[s.length() - 1] == '0' && s[s.length() - 2] == '0'
+    return true
+  else
+    return false
+  end
+  
 end
 
 # Part 3
