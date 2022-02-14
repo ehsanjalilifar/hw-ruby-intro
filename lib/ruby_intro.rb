@@ -27,8 +27,6 @@ def sum_to_n? arr, n
     
     for i in 0...arr.length()
       for j in (i+1)...arr.length()
-        puts i
-        puts j
         return true if (arr[i] + arr[j]) == n
       end
     end
